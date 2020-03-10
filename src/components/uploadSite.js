@@ -65,7 +65,7 @@ class uploadSite extends Component {
 
         const startEditingButton = (
             <Button type="primary" size="large" onClick={this.saveImage}>
-                <Link to={"/meme-generator/edit"}>Bắt Đầu Chỉnh Sửa</Link>     
+                <Link to={process.env.PUBLIC_URL + "/edit"}>Bắt Đầu Chỉnh Sửa</Link>     
             </Button>
         )
           
