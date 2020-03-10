@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter , Route , Switch, Link } from "react-router-dom"
+import { BrowserRouter , Route , Switch } from "react-router-dom"
 import uploadSite from "./components/uploadSite"
 import editSite from "./components/editSite"
 import "./App.css"
@@ -18,7 +18,7 @@ function App() {
             <h1>Meme Generator</h1>
             <Switch>
               <Route path={process.env.PUBLIC_URL +"/"} exact component={uploadSite}></Route>
-              <Route path={process.env.PUBLIC_URL +"/edit"} exact component={editSite}></Route>
+              <Route path={"/edit"} exact component={editSite}></Route>
             </Switch>
           </div>
           

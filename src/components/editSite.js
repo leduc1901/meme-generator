@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import {connect} from "react-redux"
 import {Select , Input} from 'antd';
 import 'antd/dist/antd.css';
-import { saveAs } from 'file-saver';
 import { Rnd } from "react-rnd";
 import {  message , Button} from 'antd';
 import html2canvas from 'html2canvas';
