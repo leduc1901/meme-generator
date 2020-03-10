@@ -1,25 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter , Route , Switch, Link } from "react-router-dom"
+import uploadSite from "./components/uploadSite"
+import editSite from "./components/editSite"
+import "./App.css"
+import reducer from "./reducer"
+import {createStore} from "redux"
+import {Provider} from 'react-redux';
+
+let store = createStore(reducer)
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+        <BrowserRouter>
+          <div className="App">
+            <h1>Meme Generator</h1>
+            <Switch>
+              <Route path="/" exact component={uploadSite}></Route>
+              <Route path="/edit" exact component={editSite}></Route>
+            </Switch>
+          </div>
+        </BrowserRouter>
+    </Provider>
+    
+    
   );
 }
 
