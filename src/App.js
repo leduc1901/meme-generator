@@ -11,8 +11,9 @@ let store = createStore(reducer)
 
 function App() {
   return (
-    <Provider store={store}>
-        <BrowserRouter>
+    
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
+          <Provider store={store}>
           <div className="App">
             <h1>Meme Generator</h1>
             <Switch>
@@ -20,8 +21,9 @@ function App() {
               <Route path="/edit" exact component={editSite}></Route>
             </Switch>
           </div>
+          </Provider>
         </BrowserRouter>
-    </Provider>
+    
     
     
   );
