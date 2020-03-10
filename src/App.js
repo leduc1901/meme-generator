@@ -12,7 +12,7 @@ let store = createStore(reducer)
 function App() {
   return (
     
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <BrowserRouter >
           <Provider store={store}>
           <div className="App">
             <h1>Meme Generator</h1>
