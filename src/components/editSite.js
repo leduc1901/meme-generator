@@ -186,7 +186,7 @@ export class editSite extends Component {
                         <Button className="addNew" size="large"  onClick={this.addNewInput} type="primary">Thêm Dòng Mới</Button>
                         {this.renderInput()}
                         <Button className="returnPageBtn" size="large"  onClick={this.addNewInput} type="primary">
-                            <Link to={process.env.PUBLIC_URL + "/"}>Upload Ảnh Khác</Link>
+                            <Link to="/">Upload Ảnh Khác</Link>
                         </Button>
                     </div>
                 </div>
